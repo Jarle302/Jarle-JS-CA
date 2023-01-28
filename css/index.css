@@ -1,6 +1,17 @@
 .card {
-  height: 400px;
-  width: 300px;
+  box-sizing: border-box;
+  height: 310px;
+  width: 223px;
   border: 12px solid black;
   border-radius: 12px;
+}
+
+.card__power-thoughness {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.card__name {
+  display: flex;
+  justify-content: space-between;
 }

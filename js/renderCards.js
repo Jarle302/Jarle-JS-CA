@@ -1,4 +1,4 @@
-export default function renderCards({
+export default function renderManualCards({
   artist,
   name,
   text,
@@ -6,11 +6,8 @@ export default function renderCards({
   manaCost,
   power,
   toughness,
-  imageUrl,
 }) {
-  if (imageUrl) cardString += `<img src="${imageUrl}" alt="">`;
-  else {
-    cardString += `<section class="card"> 
+  cardString += `<section class="card"> 
       <div class="card__name"> <h2>${name}</h2> <div>${manaCost}</div></div>
       <div class="card__img">  </div>
       <div class="card__type"> <p>${type}</p> </div>
@@ -18,5 +15,4 @@ export default function renderCards({
       <div class="card__power-thoughness"><h3>${power}/${toughness}</h3> </div></div>
       <div class="card__footer" ><p>${artist}</p></div>
       </section> `;
-  }
 }

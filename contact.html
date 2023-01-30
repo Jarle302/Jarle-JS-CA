@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/contact.css" />
+    <script src="/js/contact.js" defer></script>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <div class="wrapper">
+        <form id="contact--form" action="">
+          <input type="text" class="form__input" id="name" name="name" />
+          <label for="name">Name(first and last name)</label>
+          <div class="error-message--container">
+            <span class="error-message--text" id="error--name"></span>
+          </div>
+          <input type="text" class="form__input" id="subject" name="subject" />
+          <label for="subject">Subject</label>
+          <div class="error-message--container">
+            <span class="error-message--text" id="error--subject"></span>
+          </div>
+          <input type="text" class="form__input" id="adress" name="adress" />
+          <label for="adress">Adress</label>
+          <div class="error-message--container">
+            <span class="error-message--text" id="error--adress"></span>
+          </div>
+          <input type="email" class="form__input" id="email" name="email" />
+          <label for="email">Email</label>
+          <div class="error-message--container">
+            <span class="error-message--text" id="error--email"></span>
+          </div>
+          <button>Submit</button>
+        </form>
+      </div>
+    </main>
+    <footer></footer>
+  </body>
+</html>

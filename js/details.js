@@ -1,13 +1,16 @@
 const queryString = document.location.search;
 const qParams = new URLSearchParams(queryString);
-const qParamsId = qParams.get("id");
-console.log(qParamsId);
-
+const id = qParams.get("id");
+console.log(id);
 const baseUrl = "https://api.magicthegathering.io/v1/";
 
 async function fetchCards() {
-  const getCards = await fetch(`${baseUrl}cards/${qParamsId}`);
-  const response = await getCards.json();
-  response.cards;
-  console.log(response);
+  try {
+    const getCard = await fetch(`${baseUrl}cards/${id}`);
+    const response = await getCard.json();
+    console.log(response);
+  } catch (err) {
+    console.log("there was an error");
+  }
 }
+fetchCards();

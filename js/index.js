@@ -1,8 +1,8 @@
 const baseUrl = "https://api.magicthegathering.io/v1/";
 let cardString = "";
 
-function renderCards(card) {
-  cardString += ` <a href="../details.html?id=${card.id}"> <img src="${card.imageUrl}" alt="">  </a>`;
+function renderCards({ id, imageUrl, name, text }) {
+  cardString += ` <a href="../details.html?id=${id}"> <img src="${imageUrl}" alt="Magic the gathering playing card"> <div class="card"> <h2>${name}</h2> <p>${text}</p></div>  </a>`;
 }
 
 async function fetchCards() {
@@ -12,6 +12,7 @@ async function fetchCards() {
     response.cards
       .filter((hasImage) => hasImage.imageUrl)
       .map((card) => renderCards(card));
+    console.log(response);
     document.querySelector(".card-container").innerHTML = cardString;
   } catch (err) {
     cardString = "There was an error.";

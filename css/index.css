@@ -1,8 +1,12 @@
+.card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
 .card {
   box-sizing: border-box;
   height: 310px;
   width: 223px;
-  border: 12px solid black;
   border-radius: 12px;
 }
 
@@ -14,4 +18,9 @@
 .card__name {
   display: flex;
   justify-content: space-between;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }

@@ -1,4 +1,4 @@
-export default function renderManualCards({
+export function renderManualCards({
   artist,
   name,
   text,

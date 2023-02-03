@@ -6,39 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="/css/contact.css" />
+    <link rel="stylesheet" href="/css/nav.css" />
     <script src="/js/contact.js" defer></script>
   </head>
   <body>
-    <header></header>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a class="active" href="./contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
     <main>
       <div class="wrapper">
         <form id="contact--form" action="">
-          <input type="text" class="form__input" id="name" name="name" />
           <label for="name">First name</label>
           <div>
             <p class="error-message--text" id="error--name">*Required</p>
           </div>
-          <input type="text" class="form__input" id="subject" name="subject" />
+          <input type="text" class="form__input" id="name" name="name" />
+
           <label for="subject">Subject</label>
           <div class="error-message--container">
             <p class="error-message--text" id="error--subject">
               Minimum 10 characters
             </p>
           </div>
-          <input type="text" class="form__input" id="address" name="address" />
+          <input type="text" class="form__input" id="subject" name="subject" />
+
           <label for="adress">Address</label>
           <div class="error-message--container">
             <p class="error-message--text" id="error--address">
               Minimum 25 characters
             </p>
           </div>
-          <input type="text" class="form__input" id="email" name="email" />
+          <input type="text" class="form__input" id="address" name="address" />
+
           <label for="email">Email</label>
           <div class="error-message--container">
             <p class="error-message--text" id="error--email">
               Please use a valid email.
             </p>
           </div>
+          <input type="text" class="form__input" id="email" name="email" />
           <button type="submit">Submit</button>
         </form>
       </div>

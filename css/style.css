@@ -23,13 +23,3 @@ body {
   display: flex;
   justify-content: space-between;
 }
-
-a {
-  text-decoration: none;
-  color: black;
-}
-
-ul {
-  text-decoration: none;
-  padding: 0;
-}

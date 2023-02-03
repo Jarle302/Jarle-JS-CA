@@ -1,0 +1,12 @@
+a {
+  text-decoration: none;
+}
+
+nav > ul {
+  display: flex;
+  padding: 40px;
+  background-color: rgb(24, 156, 176);
+  list-style: none;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}

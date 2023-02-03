@@ -1,13 +1,15 @@
 const baseUrl = "https://api.magicthegathering.io/v1/";
 let cardString = "";
+const endpoints = document.querySelector("#endpoints");
+const searchQuery = document.querySelector("#searchQuery");
 
 function renderCards({ id, imageUrl, name, text }) {
   cardString += ` <a href="../details.html?id=${id}"> <img src="${imageUrl}" alt="Magic the gathering playing card"> <div class="card"> <h2>${name}</h2> <p>${text}</p></div>  </a>`;
 }
 
-async function fetchCards() {
+async function fetchCards(queryString) {
   try {
-    const getCards = await fetch(`${baseUrl}cards`);
+    const getCards = await fetch(`${baseUrl}cards/?name=${queryString}`);
     const response = await getCards.json();
     response.cards
       .filter((hasImage) => hasImage.imageUrl)
@@ -20,4 +22,10 @@ async function fetchCards() {
   }
 }
 
-fetchCards();
+document.querySelector("#search-form").addEventListener("submit", (e) => {
+  e.preventDefault();
+  cardString = "";
+  fetchCards(searchQuery.value);
+});
+
+//fetchCards();

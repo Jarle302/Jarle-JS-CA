@@ -14,26 +14,32 @@
       <div class="wrapper">
         <form id="contact--form" action="">
           <input type="text" class="form__input" id="name" name="name" />
-          <label for="name">Name(first and last name)</label>
-          <div class="error-message--container">
-            <span class="error-message--text" id="error--name"></span>
+          <label for="name">First name</label>
+          <div>
+            <p class="error-message--text" id="error--name">*Required</p>
           </div>
           <input type="text" class="form__input" id="subject" name="subject" />
           <label for="subject">Subject</label>
           <div class="error-message--container">
-            <span class="error-message--text" id="error--subject"></span>
+            <p class="error-message--text" id="error--subject">
+              Minimum 10 characters
+            </p>
           </div>
-          <input type="text" class="form__input" id="adress" name="adress" />
-          <label for="adress">Adress</label>
+          <input type="text" class="form__input" id="address" name="address" />
+          <label for="adress">Address</label>
           <div class="error-message--container">
-            <span class="error-message--text" id="error--adress"></span>
+            <p class="error-message--text" id="error--address">
+              Minimum 25 characters
+            </p>
           </div>
-          <input type="email" class="form__input" id="email" name="email" />
+          <input type="text" class="form__input" id="email" name="email" />
           <label for="email">Email</label>
           <div class="error-message--container">
-            <span class="error-message--text" id="error--email"></span>
+            <p class="error-message--text" id="error--email">
+              Please use a valid email.
+            </p>
           </div>
-          <button>Submit</button>
+          <button type="submit">Submit</button>
         </form>
       </div>
     </main>

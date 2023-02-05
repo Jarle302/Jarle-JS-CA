@@ -25,9 +25,11 @@ function renderCardDetails({
 
 async function fetchCards() {
   try {
+    document.querySelector(".loading").style.display = "block";
     const getCard = await fetch(`${baseUrl}cards/${id}`);
     const response = await getCard.json();
     console.log(response);
+    document.querySelector(".loading").style.display = "none";
     renderCardDetails(response.card);
   } catch (err) {
     console.log("there was an error");

@@ -9,11 +9,14 @@ function renderCards({ id, imageUrl, name, text }) {
 
 async function fetchCards(queryString) {
   try {
+    document.querySelector(".loading").style.display = "block";
     const getCards = await fetch(`${baseUrl}cards/?name=${queryString}`);
     const response = await getCards.json();
     response.cards
       .filter((hasImage) => hasImage.imageUrl)
       .map((card) => renderCards(card));
+    document.querySelector(".loading").style.display = "none";
+
     console.log(response);
     document.querySelector(".card-container").innerHTML = cardString;
   } catch (err) {

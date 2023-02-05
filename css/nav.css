@@ -1,7 +1,7 @@
 body {
   margin: 0;
   display: grid;
-  grid-template-rows: 1fr auto 1fr;
+  grid-template-rows: auto 1fr auto;
   background: #023859;
   color: white;
 }
@@ -43,5 +43,12 @@ nav > ul {
 }
 
 .logo {
-  width: 100px;
+  width: 70px;
+  padding: 10px;
+  border-radius: 16px;
+}
+
+.active {
+  background-color: antiquewhite;
+  color: black;
 }

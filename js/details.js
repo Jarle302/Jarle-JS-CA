@@ -20,7 +20,7 @@ function renderCardDetails({
   document.querySelector(
     "#card-details--container"
   ).innerHTML = `<div class="card-details--textBox"><h1>${name}</h1>  <p>${text}</p><ul> <p> <b>Rarity:</b> ${rarity}</p> <p> <b>Set:</b> ${set}</p> <h3>Legalities</h3>${legal}</ul> <ul class="ul--prints" > <h3>Printed in</h3> ${prints}</ul> </div> 
-  <img src="${imageUrl}" alt="Magic the gathering playing card">`;
+  <img class="img--mtg-card" src="${imageUrl}" alt="Magic the gathering playing card">`;
 }
 
 async function fetchCards() {

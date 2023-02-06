@@ -13,6 +13,7 @@ function renderCardDetails({
   rarity,
   set,
 }) {
+  document.title = name;
   let legal = legalities
     .map((format) => `<li>${format.format} : ${format.legality}</li>`)
     .join("");

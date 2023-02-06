@@ -8,6 +8,11 @@ main {
   gap: 40px;
 }
 
+.h2--validation {
+  display: none;
+  color: green;
+}
+
 .h2--warning {
   color: red;
   font-weight: bold;

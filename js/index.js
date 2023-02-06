@@ -7,7 +7,7 @@ function renderCards({ id, imageUrl, name, text }) {
   cardString += ` <a href="../details.html?id=${id}"> <img src="${imageUrl}" alt="Magic the gathering playing card"> <div class="card"> <h2>${name}</h2> <p>${text}</p></div>  </a>`;
 }
 
-async function fetchCards(queryString) {
+async function fetchCards(queryString = "brainstorm") {
   try {
     document.querySelector(".loading").style.display = "block";
     const getCards = await fetch(`${baseUrl}cards/?name=${queryString}`);
@@ -31,4 +31,4 @@ document.querySelector("#search-form").addEventListener("submit", (e) => {
   fetchCards(searchQuery.value);
 });
 
-//fetchCards();
+fetchCards();

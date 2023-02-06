@@ -8,6 +8,12 @@ main {
   gap: 40px;
 }
 
+.h2--warning {
+  color: red;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
 #search-form {
   display: block;
 }

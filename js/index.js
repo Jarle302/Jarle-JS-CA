@@ -20,7 +20,7 @@ async function fetchCards(queryString) {
     console.log(response);
     document.querySelector(".card-container").innerHTML = cardString;
   } catch (err) {
-    cardString = "There was an error.";
+    cardString = `<h2 class="h2--warning">There was an error!</h2> <img src="../images/error.jpg" />`;
     document.querySelector(".card-container").innerHTML = cardString;
   }
 }

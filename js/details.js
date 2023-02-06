@@ -32,7 +32,9 @@ async function fetchCards() {
     document.querySelector(".loading").style.display = "none";
     renderCardDetails(response.card);
   } catch (err) {
-    console.log("there was an error");
+    document.querySelector(
+      "#card-details--container"
+    ).innerHTML = `<h2 class="h2--warning">There was an error!</h2> <img src="../images/error.jpg" />`;
   }
 }
 fetchCards();

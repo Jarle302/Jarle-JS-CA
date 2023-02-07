@@ -75,6 +75,18 @@ form {
   align-items: start;
 }
 
+button {
+  border-radius: 8px;
+  padding: 7px 19px;
+  background: #ffc03a;
+}
+
+#contact--form {
+  box-shadow: 2px 3px 4px black;
+  border-radius: 8px;
+  padding: 21px;
+}
+
 .error-message--text {
   display: none;
   color: rgb(255, 0, 0);

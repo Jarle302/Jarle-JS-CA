@@ -10,4 +10,4 @@
 
 ## Contact
 
-### Validates the inputs after the critera stated in the Ca brief. I decided to keep the email input as type="text" thinking that the purpose of including the contact page is to practice validating the form and the input email has a good default built in validation that i didnt want to rely on for this ca. In a realworld project i would use the email input type, for the built in validation but also for better ux.
+### Validates the inputs after the critera stated in the Ca brief. I decided to keep the email input as type="text" thinking that the purpose of including the contact page is to practice validating the form and the input email has a good default built in validation that i didnt want to rely on for this ca. In a realworld project i would use the email input type, for the built in validation but also for better ux. got the regex from https://digitalfortress.tech/tips/top-15-commonly-used-regex/

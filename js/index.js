@@ -12,6 +12,9 @@ async function fetchCards(queryString = "brainstorm") {
     document.querySelector(".loading").style.display = "block";
     const getCards = await fetch(`${baseUrl}cards/?name=${queryString}`);
     const response = await getCards.json();
+    if (response.cards.length === 0) {
+      throw "Error";
+    }
     response.cards
       .filter((hasImage) => hasImage.imageUrl)
       .map((card) => renderCards(card));
@@ -19,7 +22,7 @@ async function fetchCards(queryString = "brainstorm") {
     console.log(response);
     document.querySelector(".card-container").innerHTML = cardString;
   } catch (err) {
-    cardString = `<h2 class="h2--warning">There was an error!</h2> <img src="../images/error.jpg" />`;
+    cardString = `<h2 class="h2--warning">There was an error!</h2> <p>Try again using only letters in your search or / if looking for a split card</p> <img class="error__img" src="../images/error.jpg" />`;
     document.querySelector(".card-container").innerHTML = cardString;
   }
 }

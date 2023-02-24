@@ -13,7 +13,7 @@ async function fetchCards(queryString = "brainstorm") {
     const getCards = await fetch(`${baseUrl}cards/?name=${queryString}`);
     const response = await getCards.json();
     if (response.cards.length === 0) {
-      throw "Error";
+      throw "invalid search";
     }
     response.cards
       .filter((hasImage) => hasImage.imageUrl)

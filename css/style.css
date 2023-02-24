@@ -166,6 +166,11 @@ nav > ul {
   max-width: 40%;
 }
 
+.img--mtg-card:hover {
+  max-width: 100%;
+  transition: all 0.5s ease-in;
+}
+
 ul {
   padding: 0;
   list-style: none;

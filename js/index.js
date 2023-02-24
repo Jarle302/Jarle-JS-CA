@@ -16,7 +16,6 @@ async function fetchCards(queryString = "brainstorm") {
       .filter((hasImage) => hasImage.imageUrl)
       .map((card) => renderCards(card));
     document.querySelector(".loading").style.display = "none";
-
     console.log(response);
     document.querySelector(".card-container").innerHTML = cardString;
   } catch (err) {
